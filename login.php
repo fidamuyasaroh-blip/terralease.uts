@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -10,7 +12,7 @@
 </head>
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100">
-        <form action="Proses/prosesLogin.php" method="POST" class="card p-4 shadow">
+        <form action="api/Proses/prosesLogin.php" method="POST" class="card p-4 shadow">
             <h2 class="text-success text-center fw-bold mb-4">Login</h2>
             
             <div class="mb-3">

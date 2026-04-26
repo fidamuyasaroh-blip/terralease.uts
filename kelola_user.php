@@ -53,7 +53,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM users ORDER BY role ASC");
                                 </span>
                             </td>
                             <td>
-                                <a href="Proses/hapusUser.php?id=<?= $row['id']; ?>" 
+                                <a href="api/Proses/hapusUser.php?id=<?= $row['id']; ?>" 
                                    class="btn btn-danger btn-sm" 
                                    onclick="return confirm('Yakin ingin menghapus user ini?')">Hapus</a>
                             </td>

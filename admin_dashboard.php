@@ -33,7 +33,7 @@ include 'koneksi.php';
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="Proses/logout.php" class="btn btn-danger btn-sm px-3" style="border-radius: 20px;">Logout</a>
+                        <a href="api/Proses/logout.php" class="btn btn-danger btn-sm px-3" style="border-radius: 20px;">Logout</a>
                     </li>
                 </ul>
             </div>

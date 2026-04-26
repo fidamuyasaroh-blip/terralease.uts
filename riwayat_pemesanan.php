@@ -65,7 +65,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM peminjaman ORDER BY tanggal DESC"
                             <?php if($row['status'] == 'lunas'): ?>
                                 <span class="badge bg-success px-3 py-2">✓ Sukses</span>
                             <?php else: ?>
-                                <a href="Proses/konfirmasi_bayar.php?id=<?= $row['id']; ?>" class="btn btn-success btn-sm" style="border-radius: 8px;">
+                                <a href="api/Proses/konfirmasi_bayar.php?id=<?= $row['id']; ?>" class="btn btn-success btn-sm" style="border-radius: 8px;">
                                     ✓ Konfirmasi
                                 </a>
                             <?php endif; ?>

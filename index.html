@@ -81,14 +81,14 @@
         const btnAkses = document.getElementById('btn-akses');
         const linkKatalog = document.getElementById('link-katalog');
 
-        fetch('Proses/check_session.php')
+        fetch('api/Proses/check_session.php')
             .then(response => response.json())
             .then(data => {
                 if (data.loggedIn) {
                     // Sudah login — ubah navbar dan hero
                     authSection.innerHTML = `
                         <span style="color: white;">Halo, <strong>${data.username}</strong></span>
-                        <a href="Proses/logout.php" style="background: #e74c3c; color: white; padding: 6px 18px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Logout</a>
+                        <a href="api/Proses/logout.php" style="background: #e74c3c; color: white; padding: 6px 18px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Logout</a>
                     `;
                     heroGreeting.innerHTML = `Halo <strong>${data.username}</strong>, siap untuk mengolah lahan hari ini?`;
                     btnAkses.textContent = "Lihat Katalog Alat";

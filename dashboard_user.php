@@ -65,7 +65,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM peminjaman WHERE username='$usern
                         <span class="nav-link text-light">Hai, <strong><?= $username; ?></strong></span>
                     </li>
                     <li class="nav-item">
-                        <a href="Proses/logout.php" class="btn btn-outline-warning btn-sm fw-bold px-3">Logout</a>
+                        <a href="api/Proses/logout.php" class="btn btn-outline-warning btn-sm fw-bold px-3">Logout</a>
                     </li>
                 </ul>
             </div>
