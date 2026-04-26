@@ -52,7 +52,7 @@ $total_bayar = $durasi * $harga_per_hari;
             </div>
         </div>
 
-        <form action="api/Proses/simpan_pinjam.php" method="POST">
+        <form action="Proses/simpan_pinjam.php" method="POST">
             <input type="hidden" name="id_alat" value="<?php echo $id_alat; ?>">
             <input type="hidden" name="durasi" value="<?php echo $durasi; ?>">
             <input type="hidden" name="total" value="<?php echo $total_bayar; ?>">

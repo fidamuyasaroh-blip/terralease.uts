@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100">
-        <form action="api/Proses/prosesRegister.php" method="POST" class="card p-4 shadow">
+        <form action="Proses/prosesRegister.php" method="POST" class="card p-4 shadow">
             <h2 class="text-success text-center fw-bold mb-4">Daftar Akun</h2>
             
             <div class="mb-3">

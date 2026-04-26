@@ -13,7 +13,7 @@
                     <a class="nav-link text-white fw-bold px-3" href="daftar_alat.php">Katalog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white fw-bold px-3" href="api/Proses/logout.php">Logout</a>
+                    <a class="nav-link text-white fw-bold px-3" href="Proses/logout.php">Logout</a>
                 </li>
             </ul>
         </div>
