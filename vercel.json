@@ -2,6 +2,15 @@
   "functions": {
     "api/Proses/*.php": {
       "runtime": "vercel-php@0.7.1"
+    },
+    "*.php": {
+      "runtime": "vercel-php@0.7.1"
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/(.*).php",
+      "dest": "/$1.php"
+    }
+  ]
 }
