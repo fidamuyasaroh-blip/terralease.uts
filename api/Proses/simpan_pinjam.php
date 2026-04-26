@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once __DIR__ . '/../koneksi.php';
+require_once __DIR__ . '../../koneksi.php';
 
 $id_alat  = $_POST['id_alat'] ?? 0;
 $durasi   = $_POST['durasi'] ?? 1;
