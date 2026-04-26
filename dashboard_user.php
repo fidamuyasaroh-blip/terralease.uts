@@ -62,7 +62,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM peminjaman WHERE username='$usern
                         <a class="nav-link text-white fw-semibold" href="daftar_alat.php">Katalog</a>
                     </li>
                     <li class="nav-item">
-                        <span class="nav-link text-light">Halo, <strong><?= $username; ?></strong></span>
+                        <span class="nav-link text-light">Hai, <strong><?= $username; ?></strong></span>
                     </li>
                     <li class="nav-item">
                         <a href="Proses/logout.php" class="btn btn-outline-warning btn-sm fw-bold px-3">Logout</a>
@@ -76,7 +76,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM peminjaman WHERE username='$usern
 
         <!-- GREETING -->
         <div class="mb-4">
-            <div style="font-size: 1.5rem; font-weight: 800; color: #1a1a1a;">Selamat Datang, <?= $username ?>! 👋</div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: #000000;">Selamat Datang, <?= $username ?>! 👋</div>
             <div style="color: #6b7280; font-size: 0.9rem;">Kelola penyewaan alat pertanianmu dari sini.</div>
         </div>
 
