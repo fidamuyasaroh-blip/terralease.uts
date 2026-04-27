@@ -81,7 +81,7 @@
         const btnAkses = document.getElementById('btn-akses');
         const linkKatalog = document.getElementById('link-katalog');
 
-        fetch('Proses/check_session.php')
+        fetch('api/Proses/check_session.php')
             .then(response => response.json())
             .then(data => {
                 if (data.loggedIn) {
