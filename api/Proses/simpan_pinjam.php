@@ -23,7 +23,7 @@ if ($metode == 'BCA') {
 } elseif ($metode == 'GOPAY' || $metode == 'DANA') {
     header("Location: ../instruksi_gopay.php?alat=$nama_alat&durasi=$durasi&total=$total&metode=$metode");
 } else {
-    header("Location: ../daftar_alat.php");
+    header("Location: /api/daftar_alat.php");
 }
 exit();
 ?>

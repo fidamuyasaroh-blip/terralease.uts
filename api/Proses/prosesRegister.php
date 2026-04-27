@@ -11,7 +11,7 @@ $role     = 'user';
 if (strlen($password) < 8) {
     echo "<script>
             alert('Password harus minimal 8 karakter!');
-            window.location.href='../register.php';
+            window.location.href='/api/register.php';
           </script>";
     exit();
 }
@@ -21,7 +21,7 @@ $cek = mysqli_query($koneksi, "SELECT * FROM users WHERE username='$username'");
 if (mysqli_num_rows($cek) > 0) {
     echo "<script>
             alert('Username sudah digunakan, pilih username lain!');
-            window.location.href='../register.php';
+            window.location.href='/api/register.php';
           </script>";
     exit();
 }
@@ -32,7 +32,7 @@ $result = mysqli_query($koneksi, $query);
 if ($result) {
     echo "<script>
             alert('Registrasi Berhasil! Silakan Login.');
-            window.location.href='../login.php';
+            window.location.href='/api/login.php';
           </script>";
 } else {
     echo "Registrasi Gagal: " . mysqli_error($koneksi);

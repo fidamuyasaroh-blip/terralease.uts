@@ -68,11 +68,11 @@ if (!$result) {
     <!-- TOMBOL KEMBALI -->
     <div class="container mt-3">
         <?php if (isset($_SESSION['role']) && $_SESSION['role'] == 'admin'): ?>
-            <a href="admin_dashboard.php" class="btn btn-outline-success btn-sm px-3">
+            <a href="api/admin_dashboard.php" class="btn btn-outline-success btn-sm px-3">
                 ← Kembali ke Dashboard Admin
             </a>
         <?php else: ?>
-            <a href="dashboard_user.php" class="btn btn-outline-success btn-sm px-3">
+            <a href="api/dashboard_user.php" class="btn btn-outline-success btn-sm px-3">
                 ← Kembali ke Dashboard
             </a>
         <?php endif; ?>
@@ -104,7 +104,7 @@ if (!$result) {
                                 <p class="card-text text-secondary mb-3" style="font-size: 0.85rem;">
                                     Stok: <span class="badge bg-light text-dark border"><?= htmlspecialchars($row['stok']); ?> unit</span>
                                 </p>
-                                <a href="detail.php?id=<?= $row['id']; ?>" class="btn btn-success w-100 fw-bold py-2 shadow-sm">
+                                <a href="api/detail.php?id=<?= $row['id']; ?>" class="btn btn-success w-100 fw-bold py-2 shadow-sm">
                                     Lihat Detail
                                 </a>
                             </div>

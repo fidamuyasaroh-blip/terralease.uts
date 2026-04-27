@@ -29,7 +29,7 @@
             
             <p class="text-center mt-3 small">
                 Belum punya akun? 
-                <a href="register.php" class="text-success fw-bold text-decoration-none">Daftar di sini</a>
+                <a href="api/register.php" class="text-success fw-bold text-decoration-none">Daftar di sini</a>
             </p>
         </form>
     </div>

@@ -45,7 +45,7 @@ $metode = $_GET['metode'] ?? 'BCA';
                class="btn btn-success py-3 fw-bold" style="border-radius: 12px;">
                 Saya Sudah Bayar
             </a>
-            <a href="daftar_alat.php" class="btn btn-link text-secondary text-decoration-none">Batal</a>
+            <a href="api/daftar_alat.php" class="btn btn-link text-secondary text-decoration-none">Batal</a>
         </div>
     </div>
 </div>

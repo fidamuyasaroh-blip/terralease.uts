@@ -93,7 +93,7 @@ $categories = [];
         </tbody>
     </table>
 
-    <a href="dashboard_user.php" class="btn-back">← Kembali ke Dashboard Terralease</a>
+    <a href="api/dashboard_user.php" class="btn-back">← Kembali ke Dashboard Terralease</a>
 </div>
 
 </body>

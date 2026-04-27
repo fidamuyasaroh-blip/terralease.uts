@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
-    header("Location: login.php");
+    header("Location: /api/login.php");
     exit();
 }
 include 'koneksi.php';
@@ -119,7 +119,7 @@ $query_tampil = mysqli_query($koneksi, "SELECT * FROM alat");
                     <button type="submit" name="edit" class="btn btn-warning w-100 fw-bold">Simpan Perubahan</button>
                 </div>
             </div>
-            <a href="kelola_alat.php" class="btn btn-secondary mt-3">Batal Edit</a>
+            <a href="api/kelola_alat.php" class="btn btn-secondary mt-3">Batal Edit</a>
         </form>
     <?php else: ?>
         <!-- Tambah -->
@@ -183,7 +183,7 @@ $query_tampil = mysqli_query($koneksi, "SELECT * FROM alat");
         </table>
     </div>
     <br>
-    <a href="admin_dashboard.php" class="btn btn-secondary">Kembali ke Dashboard</a>
+    <a href="api/admin_dashboard.php" class="btn btn-secondary">Kembali ke Dashboard</a>
 </div>
 
 </body>

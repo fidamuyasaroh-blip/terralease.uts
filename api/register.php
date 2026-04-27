@@ -33,7 +33,7 @@
             
             <p class="text-center mt-3 small">
                 Sudah punya akun? 
-                <a href="login.php" class="text-success fw-bold text-decoration-none">Login di sini</a>
+                <a href="api/login.php" class="text-success fw-bold text-decoration-none">Login di sini</a>
             </p>
         </form>
     </div>

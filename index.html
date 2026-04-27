@@ -14,10 +14,10 @@
             <div class="logo">TERRALEASE</div>
             <ul id="nav-menu">
                 <li><a href="index.html">Beranda</a></li>
-                <li><a href="daftar_alat.php" id="link-katalog">Katalog</a></li>
+                <li><a href="api/daftar_alat.php" id="link-katalog">Katalog</a></li>
                 <li id="auth-section" style="display: flex; align-items: center; gap: 10px;">
-                    <a href="login.php" style="color: white; text-decoration: none; font-weight: 500;">Login</a>
-                    <a href="register.php" style="background: #f39c12; color: white; padding: 6px 18px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Daftar</a>
+                    <a href="api/login.php" style="color: white; text-decoration: none; font-weight: 500;">Login</a>
+                    <a href="api/register.php" style="background: #f39c12; color: white; padding: 6px 18px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Daftar</a>
                 </li>
             </ul>
         </nav>
@@ -28,7 +28,7 @@
             <h1>Modernisasi Pertanian Anda</h1>
             <p id="hero-greeting">Sewa alat pertanian canggih untuk hasil panen maksimal.</p>
             <div class="mt-4">
-                <a href="login.php" id="btn-akses" class="btn btn-success btn-lg px-5">Login Sekarang</a>
+                <a href="api/login.php" id="btn-akses" class="btn btn-success btn-lg px-5">Login Sekarang</a>
             </div>
         </div>
     </section>
@@ -88,17 +88,17 @@
                     // Sudah login — ubah navbar dan hero
                     authSection.innerHTML = `
                         <span style="color: white;">Halo, <strong>${data.username}</strong></span>
-                        <a href="Proses/logout.php" style="background: #e74c3c; color: white; padding: 6px 18px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Logout</a>
+                        <a href="api/Proses/logout.php" style="background: #e74c3c; color: white; padding: 6px 18px; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.9rem;">Logout</a>
                     `;
                     heroGreeting.innerHTML = `Halo <strong>${data.username}</strong>, siap untuk mengolah lahan hari ini?`;
                     btnAkses.textContent = "Lihat Katalog Alat";
-                    btnAkses.href = "daftar_alat.php";
+                    btnAkses.href = "api/daftar_alat.php";
                 } else {
                     // Belum login — proteksi katalog
                     const proteksiAkses = (e) => {
                         e.preventDefault();
                         alert("Silahkan Login atau Daftar akun terlebih dahulu!");
-                        window.location.href = "login.php";
+                        window.location.href = "api/login.php";
                     };
                     btnAkses.addEventListener('click', proteksiAkses);
                     linkKatalog.addEventListener('click', proteksiAkses);

@@ -4,7 +4,7 @@ include 'koneksi.php';
 
 // Proteksi Admin
 if ($_SESSION['role'] != "admin") {
-    header("Location: login.php");
+    header("Location: /api/login.php");
     exit();
 }
 
@@ -22,7 +22,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM users ORDER BY role ASC");
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="fw-bold">Daftar Pengguna Sistem</h2>
-            <a href="admin_dashboard.php" class="btn btn-secondary btn-sm">Kembali ke Dashboard</a>
+            <a href="api/admin_dashboard.php" class="btn btn-secondary btn-sm">Kembali ke Dashboard</a>
         </div>
         <hr>
 
@@ -53,7 +53,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM users ORDER BY role ASC");
                                 </span>
                             </td>
                             <td>
-                                <a href="Proses/hapusUser.php?id=<?= $row['id']; ?>" 
+                                <a href="api/Proses/hapusUser.php?id=<?= $row['id']; ?>" 
                                    class="btn btn-danger btn-sm" 
                                    onclick="return confirm('Yakin ingin menghapus user ini?')">Hapus</a>
                             </td>

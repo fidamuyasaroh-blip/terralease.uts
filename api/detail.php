@@ -37,7 +37,7 @@ $deskripsi = $data['deskripsi'];
 
     <div class="container">
         <!-- Tombol Kembali -->
-        <a href="daftar_alat.php" class="btn btn-success mb-4 shadow-sm" style="border-radius: 50px; padding: 10px 25px;">
+        <a href="api/daftar_alat.php" class="btn btn-success mb-4 shadow-sm" style="border-radius: 50px; padding: 10px 25px;">
             ← Kembali ke Katalog
         </a>
 
@@ -84,7 +84,7 @@ $deskripsi = $data['deskripsi'];
                    <!-- Ganti tombol Pinjam Sekarang: -->
 
                     <?php if ($stok > 0): ?>
-                        <a href="pinjam.php?id=<?= $id ?>" class="btn btn-success btn-lg w-100 fw-bold shadow-sm py-3" style="border-radius: 12px; background-color: #2e7d32;">
+                        <a href="api/pinjam.php?id=<?= $id ?>" class="btn btn-success btn-lg w-100 fw-bold shadow-sm py-3" style="border-radius: 12px; background-color: #2e7d32;">
                             Pinjam Sekarang
                         </a>
                     <?php else: ?>

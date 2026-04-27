@@ -8,7 +8,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM alat WHERE id = '$id_alat'");
 $data = mysqli_fetch_assoc($query);
 
 if (!$data) {
-    header("Location: daftar_alat.php");
+    header("Location: /api/daftar_alat.php");
     exit();
 }
 ?>
@@ -42,7 +42,7 @@ if (!$data) {
 
         <div class="d-grid gap-2 mt-4">
             <button type="submit" class="btn btn-success btn-lg fw-bold py-3">Lanjut ke Pembayaran</button>
-            <a href="detail.php?id=<?= $data['id'] ?>" class="btn btn-warning btn-lg fw-bold text-white py-2">Batal</a>
+            <a href="api/detail.php?id=<?= $data['id'] ?>" class="btn btn-warning btn-lg fw-bold text-white py-2">Batal</a>
         </div>
     </form>
 </div>

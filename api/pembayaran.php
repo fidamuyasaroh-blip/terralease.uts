@@ -9,7 +9,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM alat WHERE id = '$id_alat'");
 $data  = mysqli_fetch_assoc($query);
 
 if (!$data) {
-    header("Location: daftar_alat.php");
+    header("Location: /api/daftar_alat.php");
     exit();
 }
 
@@ -96,7 +96,7 @@ $total_bayar = $durasi * $harga_per_hari;
                 <button type="submit" class="btn btn-success btn-konfirmasi py-3 fw-bold">
                     Konfirmasi & Bayar Sekarang
                 </button>
-                <a href="pinjam.php?id=<?php echo $id_alat; ?>" class="btn btn-batal py-2 fw-bold text-center text-decoration-none">
+                <a href="api/pinjam.php?id=<?php echo $id_alat; ?>" class="btn btn-batal py-2 fw-bold text-center text-decoration-none">
                     Batal Pinjam
                 </a>
             </div>

@@ -3,7 +3,7 @@ session_start();
 include 'koneksi.php';
 
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
+    header("Location: /api/login.php");
     exit();
 }
 
@@ -181,7 +181,7 @@ $query = mysqli_query($koneksi, "SELECT * FROM peminjaman WHERE username='$usern
                             <td colspan="7" class="text-center py-5 text-muted">
                                 <div style="font-size: 3rem;">📭</div>
                                 <p class="mt-2">Kamu belum pernah meminjam alat.</p>
-                                <a href="daftar_alat.php" class="btn btn-success btn-sm px-4">Mulai Sewa Sekarang</a>
+                                <a href="api/daftar_alat.php" class="btn btn-success btn-sm px-4">Mulai Sewa Sekarang</a>
                             </td>
                         </tr>
                     <?php endif; ?>

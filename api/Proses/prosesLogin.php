@@ -16,14 +16,14 @@ if ($cek > 0) {
     $_SESSION['role']     = $data['role'];
 
     if ($data['role'] == "admin") {
-        header("Location: ../admin_dashboard.php");
+        header("Location: /api/admin_dashboard.php");
     } else {
         if (isset($_SESSION['redirect_after_login'])) {
             $tujuan = $_SESSION['redirect_after_login'];
             unset($_SESSION['redirect_after_login']);
             header("Location: ../" . $tujuan);
         } else {
-            header("Location: ../dashboard_user.php"); 
+            header("Location: /api/dashboard_user.php"); 
         }
     }
     exit();
@@ -31,7 +31,7 @@ if ($cek > 0) {
 } else {
     echo "<script>
             alert('Username atau Password Salah!');
-            window.location.href='../login.php';
+            window.location.href='/api/login.php';
           </script>";
 }
 ?>

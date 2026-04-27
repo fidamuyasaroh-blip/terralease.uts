@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['role']) || $_SESSION['role'] != "admin") {
-    header("Location: login.php");
+    header("Location: /api/login.php");
     exit();
 }
 include 'koneksi.php';
@@ -33,7 +33,7 @@ include 'koneksi.php';
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="Proses/logout.php" class="btn btn-danger btn-sm px-3" style="border-radius: 20px;">Logout</a>
+                        <a href="api/Proses/logout.php" class="btn btn-danger btn-sm px-3" style="border-radius: 20px;">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -53,7 +53,7 @@ include 'koneksi.php';
                 <h4 class="fw-bold">Kelola User</h4>
                 <p class="opacity-75">Lihat dan atur data pelanggan yang terdaftar.</p>
                 <div class="mt-auto">
-                    <a href="kelola_user.php" class="btn btn-light fw-bold text-success btn-custom">
+                    <a href="api/kelola_user.php" class="btn btn-light fw-bold text-success btn-custom">
                         Buka Fitur →
                     </a>
                 </div>
@@ -66,7 +66,7 @@ include 'koneksi.php';
                 <h4 class="fw-bold">Kelola Alat</h4>
                 <p class="opacity-75">Update stok, harga, atau tambah alat pertanian baru.</p>
                 <div class="mt-auto">
-                    <a href="kelola_alat.php" class="btn btn-light fw-bold text-primary btn-custom">
+                    <a href="api/kelola_alat.php" class="btn btn-light fw-bold text-primary btn-custom">
                         Buka Fitur →
                     </a>
                 </div>
@@ -79,7 +79,7 @@ include 'koneksi.php';
                 <h4 class="fw-bold">Riwayat Pemesanan</h4>
                 <p class="opacity-75">Lihat semua transaksi peminjaman alat oleh pengguna.</p>
                 <div class="mt-auto">
-                    <a href="riwayat_pemesanan.php" class="btn btn-dark fw-bold text-white btn-custom">
+                    <a href="api/riwayat_pemesanan.php" class="btn btn-dark fw-bold text-white btn-custom">
                         Buka Fitur →
                     </a>
                 </div>

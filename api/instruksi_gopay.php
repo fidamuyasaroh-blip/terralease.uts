@@ -52,7 +52,7 @@ $bg_color = ($metode == 'DANA') ? '#008ced' : '#00aa13';
             Cek Status Bayar
         </button>
         
-        <a href="daftar_alat.php" class="btn btn-link btn-sm mt-3 text-decoration-none text-secondary">Batal Bayar</a>
+        <a href="api/daftar_alat.php" class="btn btn-link btn-sm mt-3 text-decoration-none text-secondary">Batal Bayar</a>
     </div>
 </div>
 
