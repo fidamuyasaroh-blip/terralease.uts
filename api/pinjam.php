@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'koneksi.php'; // ← ganti dari mysqli_connect langsung
+include 'koneksi.php'; 
 
 $id_alat = isset($_GET['id']) ? $_GET['id'] : 0;
 
@@ -12,7 +12,7 @@ if (!$data) {
     exit();
 }
 ?>
-<!-- Lanjut ke HTML-nya -->
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
