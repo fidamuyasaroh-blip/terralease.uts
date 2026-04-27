@@ -5,8 +5,12 @@
     }
   },
   "routes": [
-    { "src": "/", "dest": "/api/index.html" },
-    { "src": "/(.*)", "dest": "/api/$1" }
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/$1"
+    }
   ]
 }
-
