@@ -1,20 +1,17 @@
 <?php
-// Menggunakan variabel lingkungan (Environment Variables) untuk Vercel
-$host = getenv('DB_HOST') ?: "localhost";
-$user = getenv('DB_USER') ?: "root";
-$pass = getenv('DB_PASS') ?: "";
-$db   = getenv('DB_NAME') ?: "si_tani";
-$port = getenv('DB_PORT') ?: "3306"; // Tambahkan port jika perlu
+// Gunakan getenv agar data sensitif tidak tertulis langsung di kode
+$host = getenv('DB_HOST'); 
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASS');
+$db   = getenv('DB_NAME');
+$port = getenv('DB_PORT') ?: "3306";
 
-// Koneksi dengan tambahan parameter port
+// Koneksi ke database (Gunakan database online, bukan localhost)
 $koneksi = mysqli_connect($host, $user, $pass, $db, $port);
 
 if (!$koneksi) {
-    // Di produksi (Vercel), sebaiknya tidak menampilkan detail error ke user umum
-    error_log("Koneksi ke database gagal: " . mysqli_connect_error());
-    die("Sistem sedang mengalami gangguan teknis. Silakan coba lagi nanti.");
+    // Pesan error umum agar tidak membocorkan detail teknis di internet
+    error_log("Koneksi Database Gagal: " . mysqli_connect_error());
+    die("Maaf, layanan sedang gangguan. Silakan coba lagi nanti.");
 }
-
-// Set charset ke utf8 agar pembacaan data aman dari karakter aneh
-mysqli_set_charset($koneksi, "utf8");
 ?>
