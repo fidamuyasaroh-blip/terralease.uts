@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-require_once __DIR__ . '../koneksi.php';
+// Perbaikan path koneksi agar lebih aman
+require_once __DIR__ . '/koneksi.php'; 
 
 $username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';
@@ -16,22 +17,25 @@ if ($cek > 0) {
     $_SESSION['role']     = $data['role'];
 
     if ($data['role'] == "admin") {
-        header("Location: /api/admin_dashboard.php");
+        // Gunakan path relatif (tanpa / di depan)
+        header("Location: admin_dashboard.php");
     } else {
         if (isset($_SESSION['redirect_after_login'])) {
             $tujuan = $_SESSION['redirect_after_login'];
             unset($_SESSION['redirect_after_login']);
             header("Location: ../" . $tujuan);
         } else {
-            header("Location: /api/dashboard_user.php"); 
+            // Gunakan path relatif
+            header("Location: dashboard_user.php"); 
         }
     }
     exit();
 
 } else {
+    // window.location juga dibuat relatif
     echo "<script>
             alert('Username atau Password Salah!');
-            window.location.href='/api/login.php';
+            window.location.href='login.php'; 
           </script>";
 }
 ?>
