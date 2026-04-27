@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../koneksi.phpp';
+include '../koneksi.php';
 
 // Proteksi admin
 if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
