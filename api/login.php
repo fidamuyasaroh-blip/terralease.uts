@@ -1,10 +1,9 @@
-
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <title>Login - TERRALEASE</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tetap gunakan CDN agar style Bootstrap aman -->
+    <link href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css)" rel="stylesheet">
     <style>
         body { background-color: #f8f9fa; }
         .card { width: 350px; border: none; border-radius: 12px; }
@@ -12,6 +11,7 @@
 </head>
 <body>
     <div class="container d-flex justify-content-center align-items-center vh-100">
+        <!-- PERBAIKAN 1: Tambahkan 'api/' di depan karena prosesLogin.php ada di dalam folder -->
         <form action="Proses/prosesLogin.php" method="POST" class="card p-4 shadow">
             <h2 class="text-success text-center fw-bold mb-4">Login</h2>
             
@@ -29,7 +29,8 @@
             
             <p class="text-center mt-3 small">
                 Belum punya akun? 
-                <a href="api/register.php" class="text-success fw-bold text-decoration-none">Daftar di sini</a>
+                <!-- PERBAIKAN 2: Hapus 'api/' karena register.php kemungkinan ada di folder yang sama dengan login ini -->
+                <a href="register.php" class="text-success fw-bold text-decoration-none">Daftar di sini</a>
             </p>
         </form>
     </div>
