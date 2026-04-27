@@ -4,7 +4,7 @@ include '../koneksi.php';
 
 // Proteksi admin
 if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
-    header("Location: /api/login.php");
+    header("Location: login.php");
     exit();
 }
 
@@ -14,6 +14,6 @@ if ($id) {
     mysqli_query($koneksi, "DELETE FROM users WHERE id='$id'");
 }
 
-header("Location: /api/kelola_user.php");
+header("Location: kelola_user.php");
 exit();
 ?>

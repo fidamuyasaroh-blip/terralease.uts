@@ -3,7 +3,7 @@ session_start();
 include '/../koneksi.php';
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
-    header("Location: /api/login.php");
+    header("Location: login.php");
     exit();
 }
 
@@ -13,6 +13,6 @@ if ($id) {
     mysqli_query($koneksi, "UPDATE peminjaman SET status='lunas' WHERE id='$id'");
 }
 
-header("Location: /api/riwayat_pemesanan.php");
+header("Location: riwayat_pemesanan.php");
 exit();
 ?>

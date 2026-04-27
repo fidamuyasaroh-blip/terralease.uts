@@ -32,7 +32,7 @@ $result = mysqli_query($koneksi, $query);
 if ($result) {
     echo "<script>
             alert('Registrasi Berhasil! Silakan Login.');
-            window.location.href='/api/login.php';
+            window.location.href='login.php';
           </script>";
 } else {
     echo "Registrasi Gagal: " . mysqli_error($koneksi);
