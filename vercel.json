@@ -1,4 +1,5 @@
 {
+
   "functions": {
     "*.php": {
       "runtime": "vercel-php@0.6.0"
@@ -6,10 +7,12 @@
     "Proses/*.php": {
       "runtime": "vercel-php@0.6.0"
     }
-  },
-  "routes": [
-    { "src": "/Proses/(.*)\\.php", "dest": "/Proses/$1.php" },
-    { "src": "/(.*)\\.php", "dest": "/$1.php" },
-    { "src": "/", "dest": "/index.html" }
+  {
+  "rewrites": [
+    { "source": "/Proses/(.*)", "destination": "/Proses/$1.php" },
+    { "source": "/((?!index\\.html).*)\\.php", "destination": "/$1.php" },
+    { "source": "/", "destination": "/index.html" }
   ]
+  }
+  }
 }
