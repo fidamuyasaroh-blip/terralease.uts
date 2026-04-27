@@ -1,18 +1,5 @@
 {
-
-  "functions": {
-    "*.php": {
-      "runtime": "vercel-php@0.6.0"
-    },
-    "Proses/*.php": {
-      "runtime": "vercel-php@0.6.0"
-    }
-  {
   "rewrites": [
-    { "source": "/Proses/(.*)", "destination": "/Proses/$1.php" },
-    { "source": "/((?!index\\.html).*)\\.php", "destination": "/$1.php" },
-    { "source": "/", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/$1" }
   ]
-  }
-  }
 }
