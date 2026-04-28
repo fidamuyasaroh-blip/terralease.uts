@@ -1,10 +1,10 @@
 <?php
 // Gunakan getenv agar data sensitif tidak tertulis langsung di kode
-$host = getenv('DB_HOST'); 
-$user = getenv('DB_USER');
-$pass = getenv('DB_PASS');
-$db   = getenv('DB_NAME');
-$port = getenv('DB_PORT') ?: "3306";
+$host = getenv('Dgateway01.ap-southeast-1.prod.alicloud.tidbcloud.com'); 
+$user = getenv('47DN5h88YR2vG6n.root');
+$pass = getenv('nNViwj5m2tSckbTK');
+$db   = getenv('si_tani');
+$port = getenv('4000');
 
 // Koneksi ke database (Gunakan database online, bukan localhost)
 $koneksi = mysqli_connect($host, $user, $pass, $db, $port);
